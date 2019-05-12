@@ -1980,7 +1980,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b357b9;
+  background: #f7c696;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2800,6 +2800,112 @@ form#register-form .info-wrapper input {
   }
   .post-copyright {
     font-size: 12px !important;
+  }
+  .back-to-top {
+    display: block !important;
+    right: 15px !important;
+    opacity: 0.4 !important;
+  }
+  .site-nav-toggle {
+    z-index: 9999;
+  }
+  .site-nav {
+    position: fixed;
+    top: 0;
+    height: 100% !important;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    left: 0;
+    display: block !important;
+    background: none;
+    z-index: -1;
+  }
+  .site-nav-on {
+    z-index: 1030;
+    overflow: hidden !important;
+  }
+  .site-nav .menu {
+    height: 100%;
+    background: #fff;
+    margin-top: 0;
+    padding-top: 56px;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    left: -500px;
+    transition: all 0.2s ease-in-out;
+  }
+  .site-nav-on .menu {
+    left: 0 !important;
+  }
+  .site-nav .menu .menu-item:nth-child(1) {
+    border-top: solid 1px #ddd !important;
+  }
+  .site-nav-toggle button {
+    outline: none !important;
+    background: none !important;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  .yuzai-menu-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .site-nav-on .yuzai-menu-mask {
+    opacity: 1;
+  }
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 40px;
+    margin-top: -15px;
+    margin-left: -20px;
+  }
+  .hamRotate.active {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
   }
 }
 .brand {
